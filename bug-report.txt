@@ -1,0 +1,5 @@
+BUG REPORT
+
+I found the bug as why the form was not getting submitted on the jobDetails part of multistage form as there was an extra validation inside the jobdetailsform which was ( jobPosition: Yup.string().required("Job position is required") ) due to which formik was not letting as submit the form and there were no errors on the screen.
+
+There was also a small error in the console which said ID mismatch of react-select-server which was resolved by adding a sectionID where select-react component was used.
