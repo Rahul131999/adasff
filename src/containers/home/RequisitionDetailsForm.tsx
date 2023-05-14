@@ -10,7 +10,7 @@ import { genderOptions, urgencyOptions } from "./constants";
 
 const RequisitionDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
-  value1?: IRequisitionDetailsValues
+  value1: ( val: IRequisitionDetailsValues) => void;
 }> = ({ handleTab, value1 }) => {
   const {
     handleChange,

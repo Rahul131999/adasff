@@ -13,7 +13,7 @@ import {
 
 const InterviewSettingsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
-  value3?: IInterviewSettingsValues;
+  value3: ( val: IInterviewSettingsValues) => void;
 }> = ({ handleTab, value3 }) => {
   const {
     errors,

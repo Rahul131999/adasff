@@ -8,7 +8,7 @@ import { IJobDetails, IJobDetailsValues } from "../../interface/forms";
 
 const JobDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
-  value2?: IJobDetailsValues;
+  value2: (val: IJobDetailsValues) => void ;
 }> = ({ handleTab, value2 }) => {
   const { handleChange, errors, touched, handleBlur, handleSubmit, values } =
     useFormik<IJobDetails>({
