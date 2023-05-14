@@ -4,7 +4,7 @@ import FormSelect from "../../components/formComponents/FormSelect";
 import { useFormik } from "formik";
 import * as Yup from "yup"
 import { PageNumbers } from "../../interface/home";
-import { IInterViewSettings } from "../../interface/forms";
+import { IInterViewSettings, IInterviewSettingsValues } from "../../interface/forms";
 import {
   interviewDurationOptions,
   interviewLanguageOptions,
@@ -13,6 +13,7 @@ import {
 
 const InterviewSettingsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
+  value3?: IInterviewSettingsValues;
 }> = ({ handleTab, value3 }) => {
   const {
     errors,

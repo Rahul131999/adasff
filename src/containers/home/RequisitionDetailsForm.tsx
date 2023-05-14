@@ -5,11 +5,12 @@ import FormSelect from "../../components/formComponents/FormSelect";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { PageNumbers } from "../../interface/home";
-import { IRequisitionDetails } from "../../interface/forms";
+import { IRequisitionDetails, IRequisitionDetailsValues } from "../../interface/forms";
 import { genderOptions, urgencyOptions } from "./constants";
 
 const RequisitionDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
+  value1?: IRequisitionDetailsValues
 }> = ({ handleTab, value1 }) => {
   const {
     handleChange,
