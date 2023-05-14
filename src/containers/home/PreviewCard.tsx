@@ -1,9 +1,9 @@
 import { Box, Flex, Text, Grid } from "@chakra-ui/react";
 import React from "react";
 import {
-  IInterViewSettings,
-  IJobDetails,
-  IRequisitionDetails,
+  IInterviewSettingsValues,
+  IJobDetailsValues,
+  IRequisitionDetailsValues,
 } from "../../interface/forms";
 import {
   genderOptions,
@@ -46,9 +46,9 @@ const KeyValue: React.FC<{
 };
 
 const PreviewCard: React.FC<{
-  requisitionDetails?: IRequisitionDetails;
-  jobDetails?: IJobDetails;
-  interviewSettings?: IInterViewSettings;
+  requisitionDetails?: IRequisitionDetailsValues;
+  jobDetails?: IJobDetailsValues;
+  interviewSettings?: IInterviewSettingsValues;
 }> = ({ requisitionDetails, jobDetails, interviewSettings }) => {
   return (
     <Box p="1rem">
