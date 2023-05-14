@@ -55,13 +55,13 @@ const HomeLayout = () => {
           <Grid display="grid" gridTemplateColumns="3fr 2fr" gap="24px">
             <TabPanels>
               <TabPanel>
-                <RequisitionForm handleTab={handlePage} value1={setRequisitionDetails} />
+                <RequisitionForm value1={setRequisitionDetails} handleTab={handlePage}  />
               </TabPanel>
               <TabPanel>
-                <JobDetailsForm handleTab={handlePage} value2={setJobDetails}/>
+                <JobDetailsForm value2={setJobDetails} handleTab={handlePage} />
               </TabPanel>
               <TabPanel>
-                <InterviewSettingsForm handleTab={handlePage} value3={setInterviewSettings}/>
+                <InterviewSettingsForm value3={setInterviewSettings} handleTab={handlePage} />
               </TabPanel>
             </TabPanels>
           <DisplayCard requisitionDetails={requisitionDetails} jobDetails={jobDetails} interviewSettings={interviewSettings}  />
