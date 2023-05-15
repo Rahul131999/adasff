@@ -1,3 +1,12 @@
+/**
+ * @Author: root
+ * @Date:   2023-05-13T16:31:39+05:30
+ * @Last modified by:   root
+ * @Last modified time: 2023-05-15T01:44:08+05:30
+ */
+
+
+
 import { FormControlProps, InputProps } from "@chakra-ui/react";
 import { FormikErrors, FormikTouched } from "formik";
 
@@ -29,13 +38,13 @@ export type ISelectOption = {
 
 export interface IRequisitionDetailsValues {
   requestTitle: string;
-  owner: string;
-  hiringManager: string;
-  noOfOpenings: string;
+  //owner: string;
+  //hiringManager: string;
+  noOfOpenings: number;
   urgency: string;
-  employmentType: string;
-  prefferedGender: string;
-  status: string;
+  //employmentType: string;
+  gender: string;
+  //status: string;
 }
 
 export interface IJobDetailsValues {

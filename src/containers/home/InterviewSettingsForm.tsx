@@ -14,7 +14,7 @@ import {
 const InterviewSettingsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
   value3: ( val: IInterviewSettingsValues) => void;
-}> = ({ handleTab, value3 }) => {
+}> = ({handleTab,value3}) => {
   const {
     errors,
     touched,
@@ -38,6 +38,7 @@ const InterviewSettingsForm: React.FC<{
       alert("Form successfully submitted");
     },
   });
+
 
   return (
     <>
@@ -75,8 +76,8 @@ const InterviewSettingsForm: React.FC<{
           error={errors.interviewLanguage}
           touched={touched.interviewLanguage}
           value={values.interviewLanguage}
-          {...value3(values)}
         />
+        {value3(values)}
         <Flex w="100%" justify="flex-end" mt="4rem" gap="20px">
           <Button colorScheme="gray" type="button" onClick={() => handleTab(1)}>
             Previous

@@ -11,7 +11,7 @@ import { genderOptions, urgencyOptions } from "./constants";
 const RequisitionDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
   value1: ( val: IRequisitionDetailsValues) => void;
-}> = ({ handleTab, value1 }) => {
+}> = ({handleTab,value1}) => {
   const {
     handleChange,
     errors,
@@ -46,7 +46,9 @@ const RequisitionDetailsForm: React.FC<{
   });
 
 
+
   return (
+      <>
       <Box width="100%" as="form" onSubmit={handleSubmit as any}>
         <Box width="100%">
           <FormInput
@@ -92,8 +94,8 @@ const RequisitionDetailsForm: React.FC<{
             error={errors.urgency}
             touched={touched.urgency}
             value={values.urgency}
-            {...value1(values)}
           />
+          {value1(values)}
           <Flex w="100%" justify="flex-end" mt="4rem">
             <Button colorScheme="red" type="submit">
               Next
@@ -101,6 +103,7 @@ const RequisitionDetailsForm: React.FC<{
           </Flex>
         </Box>
       </Box>
+      </>
   );
 };
 

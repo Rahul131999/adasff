@@ -9,7 +9,7 @@ import { IJobDetails, IJobDetailsValues } from "../../interface/forms";
 const JobDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
   value2: (val: IJobDetailsValues) => void ;
-}> = ({ handleTab, value2 }) => {
+}> = ({handleTab,value2}) => {
   const { handleChange, errors, touched, handleBlur, handleSubmit, values } =
     useFormik<IJobDetails>({
       initialValues: {
@@ -30,6 +30,7 @@ const JobDetailsForm: React.FC<{
     });
 
   return (
+    <>
     <Box width="100%" as="form" onSubmit={handleSubmit as any}>
       <Box width="100%">
         <FormInput
@@ -61,8 +62,8 @@ const JobDetailsForm: React.FC<{
           error={errors.jobLocation}
           touched={touched.jobLocation}
           value={values.jobLocation}
-          {...value2(values)}
         />
+        {value2(values)}
         <Flex w="100%" justify="flex-end" mt="4rem" gap="20px">
           <Button colorScheme="gray" type="button" onClick={() => handleTab(0)}>
             Previous
@@ -73,6 +74,7 @@ const JobDetailsForm: React.FC<{
         </Flex>
       </Box>
     </Box>
+    </>
   );
 };
 
